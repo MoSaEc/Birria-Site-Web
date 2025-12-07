@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Haz tu pedido de Birria - Entrega a domicilio y para llevar">
+    <title>Pedidos - Birria</title>
+    <link rel="stylesheet" href="estilos/base.css">
+    <link rel="stylesheet" href="estilos/navegacion.css">
+    <link rel="stylesheet" href="estilos/componentes.css">
+    <link rel="stylesheet" href="estilos/pedidos.css">
+    <script src="js/audio-persistente.js"></script>
+    <script src="js/animations.js" defer></script>
+    <script>
+        function mostrarDireccion() {
+            var modalidad = document.getElementById('modalidad').value;
+            var direccionDiv = document.getElementById('direccion-div');
+            direccionDiv.style.display = (modalidad === 'domicilio') ? 'block' : 'none';
+        }
+    </script>
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="pedidos.html" class="active">Pedidos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-pedidos" style="min-height: 60vh;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-on-scroll">
+            <h1 class="hero-title">Haz tu Pedido</h1>
+            <p class="hero-subtitle">
+                Disfruta de nuestra deliciosa birria en casa o en nuestro restaurante
+            </p>
+        </div>
+    </section>
+
+    <!-- Proceso de Pedido -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center fade-on-scroll">Proceso de Pedido</h2>
+            <div class="divider"></div>
+
+            <div class="proceso-pedido">
+                <div class="paso-card fade-on-scroll">
+                    <div class="paso-numero">1</div>
+                    <h3>Ordena</h3>
+                    <p>Llena el formulario con tus datos y selecciona tus plat illos favoritos</p>
+                </div>
+                <div class="paso-card fade-on-scroll">
+                    <div class="paso-numero" style="background: var(--gradiente-naranja);">2</div>
+                    <h3>Confirmamos</h3>
+                    <p>Te contactaremos para confirmar tu pedido y tiempo de entrega</p>
+                </div>
+                <div class="paso-card fade-on-scroll">
+                    <div class="paso-numero" style="background: linear-gradient(135deg, #2F9E44 0%, #37B24D 100%);">3
+                    </div>
+                    <h3>Disfruta</h3>
+                    <p>Recibe tu pedido caliente y fresco, listo para disfrutar</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Pedido -->
+    <section class="section section-alt">
+        <div class="container container-narrow">
+            <div class="form-container fade-on-scroll">
+                <h2 class="text-center" style="margin-bottom: 2rem;">Formulario de Pedido</h2>
+
+                <form id="formulario-pedidos" action="#" method="post">
+                    <!-- Información Personal -->
+                    <div class="form-group">
+                        <label for="nombre">Nombre Completo *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono *</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+
+                    <!-- Tamaño de Orden -->
+                    <div class="form-group">
+                        <label>Tamaño de Orden *</label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="individual" name="tamano" value="individual" required>
+                                <label for="individual">Individual (1-2 personas)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="familiar" name="tamano" value="familiar">
+                                <label for="familiar">Familiar (3-5 personas)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="evento" name="tamano" value="evento">
+                                <label for="evento">Evento (6+ personas)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Selección de Platillos -->
+                    <div class="form-group">
+                        <label>Platillos Deseados * (Selecciona todos los que quieras)</label>
+                        <div class="checkbox-group">
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="tacos" name="platillos[]" value="tacos">
+                                <label for="tacos">🌮 Tacos de Birria</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="quesabirria" name="platillos[]" value="quesabirria">
+                                <label for="quesabirria">🧀 Quesabirria</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="consome" name="platillos[]" value="consome">
+                                <label for="consome">🍲 Consomé de Birria</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="plato" name="platillos[]" value="plato">
+                                <label for="plato">🍽️ Birria en Plato</label>
+                            </div>
+                            <div class="checkbox-option">
+                                <input type="checkbox" id="extras" name="platillos[]" value="extras">
+                                <label for="extras">🌶️ Extras (salsas, guarniciones)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modalidad -->
+                    <div class="form-group">
+                        <label for="modalidad">Modalidad de Entrega *</label>
+                        <select id="modalidad" name="modalidad" onchange="mostrarDireccion()" required>
+                            <option value="">Selecciona una opción</option>
+                            <option value="llevar">Para Llevar</option>
+                            <option value="local">Comer en el Local</option>
+                            <option value="domicilio">Servicio a Domicilio</option>
+                        </select>
+                    </div>
+
+                    <!-- Dirección (condicional) -->
+                    <div id="direccion-div" style="display: none;">
+                        <div class="form-group">
+                            <label for="direccion">Dirección de Entrega *</label>
+                            <textarea id="direccion" name="direccion" rows="3"
+                                placeholder="Calle, número, colonia, referencias..."></textarea>
+                            <p class="small-text" style="margin-top: 0.5rem;">
+                                📍 Área de cobertura: 10km | Pedido mínimo: $200 | Tiempo: 45-60 min
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Especificaciones -->
+                    <div class="form-group">
+                        <label for="especificaciones">Especificaciones del Pedido (opcional)</label>
+                        <textarea id="especificaciones" name="especificaciones" rows="4"
+                            placeholder="Indica si deseas algo especial: sin picante, extra salsa, etc."></textarea>
+                    </div>
+
+                    <!-- Botón Submit -->
+                    <input type="submit" value="Enviar Pedido 🛒">
+
+                    <p class="small-text text-center" style="margin-top: 1rem;">
+                        * Al enviar, recibirás una confirmación por email y teléfono
+                    </p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menú Descargable -->
+    <section class="section">
+        <div class="container container-narrow">
+            <div class="menu-download fade-on-scroll">
+                <h2>¿Prefieres ver nuestro menú completo?</h2>
+                <p style="color: white; margin: 1rem 0;">
+                    Descarga nuestra carta digital con precios y descripciones detalladas
+                </p>
+                <a href="documentos/menu-birria.pdf" download class="download-button">
+                    📥 Descargar Menú PDF
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>Birria</h4>
+                <p>La auténtica birria estilo Jalisco desde hace más de 30 años.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Enlaces</h4>
+                <a href="index.html">Inicio</a>
+                <a href="especialidades.html">Especialidades</a>
+                <a href="pedidos.html">Pedidos</a>
+                <a href="galeria.html">Galería</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <p>📍 Av. Revolución #456<br>Guadalajara, Jalisco</p>
+                <p>📞 +52 (33) 1234-5678</p>
+            </div>
+            <div class="footer-column">
+                <h4>Horarios</h4>
+                <p>Lun-Jue: 11AM-9PM</p>
+                <p>Vie-Sáb: 11AM-11PM</p>
+                <p>Dom: 10AM-8PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Birria. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+

@@ -1,0 +1,257 @@
+/* ===================================
+   CONTACTO - Estilos Específicos
+   =================================== */
+
+/* Tarjetas de información */
+.info-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-2xl) 0;
+}
+
+.info-card {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 3px solid var(--color-crema-medio);
+    box-shadow: var(--sombra-md);
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    background: var(--gradiente-rojo);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.info-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-xl);
+    border-color: var(--color-naranja-calido);
+}
+
+.info-icon {
+    font-size: 3.5rem;
+    margin-bottom: var(--spacing-md);
+    display: block;
+}
+
+.info-card h3 {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-texto-principal);
+}
+
+.info-card a {
+    color: var(--color-rojo-principal);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-fast);
+}
+
+.info-card a:hover {
+    color: var(--color-naranja-calido);
+    text-decoration: underline;
+}
+
+/* Videos y multimedia */
+.video-container {
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--sombra-lg);
+    border: 3px solid var(--color-crema-medio);
+    margin: var(--spacing-2xl) 0;
+}
+
+.video-container h2 {
+    margin-bottom: var(--spacing-lg);
+}
+
+.video-wrapper {
+    position: relative;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--sombra-md);
+}
+
+iframe,
+video,
+audio {
+    border-radius: var(--radius-lg);
+    box-shadow: var(--sombra-md);
+}
+
+/* Redes sociales */
+.social-section {
+    background: var(--gradiente-rojo);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    color: white;
+    box-shadow: var(--sombra-xl);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    margin: var(--spacing-2xl) 0;
+}
+
+.social-section h2 {
+    color: white;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-lg);
+    flex-wrap: wrap;
+    margin: var(--spacing-xl) 0;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 1rem 2rem;
+    background: white;
+    color: var(--color-texto-principal);
+    text-decoration: none;
+    border-radius: var(--radius-lg);
+    font-weight: 700;
+    transition: all var(--transition-base);
+    box-shadow: var(--sombra-md);
+}
+
+.social-link:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: var(--sombra-xl);
+}
+
+/* Horarios */
+.horarios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.horario-card {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--color-crema-medio);
+    border-left: 5px solid var(--color-rojo-principal);
+    box-shadow: var(--sombra-sm);
+    text-align: center;
+}
+
+.horario-dia {
+    font-weight: 700;
+    color: var(--color-texto-principal);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.horario-horas {
+    color: var(--color-texto-secundario);
+}
+
+/* Servicio a domicilio */
+.servicio-domicilio {
+    background: var(--gradiente-naranja);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    color: white;
+    box-shadow: var(--sombra-lg);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.servicio-domicilio h2 {
+    color: white;
+}
+
+.servicio-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: var(--spacing-lg);
+    background: white;
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    margin-top: var(--spacing-lg);
+}
+
+.feature-item {
+    text-align: center;
+}
+
+.feature-item strong {
+    display: block;
+    color: var(--color-texto-principal);
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+}
+
+.feature-item p {
+    color: var(--color-texto-secundario);
+    margin: 0;
+}
+
+/* Formulario de contacto */
+#contacto-form {
+    background: white;
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--sombra-lg);
+    border: 3px solid var(--color-crema-medio);
+}
+
+/* CTA final */
+.contact-cta {
+    text-align: center;
+    margin: var(--spacing-2xl) 0;
+    padding: var(--spacing-2xl);
+    background: var(--gradiente-sutil);
+    border-radius: var(--radius-xl);
+    border: 3px solid rgba(201, 42, 42, 0.1);
+}
+
+.contact-cta h3 {
+    color: var(--color-rojo-principal);
+    font-size: 2rem;
+    margin-bottom: var(--spacing-lg);
+}
+
+.cta-buttons {
+    display: flex;
+    gap: var(--spacing-md);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+@media (max-width: 768px) {
+    .social-links {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .social-link {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+    }
+
+    .cta-buttons .btn {
+        width: 100%;
+    }
+}

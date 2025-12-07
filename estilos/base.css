@@ -1,0 +1,361 @@
+/* ===================================
+   BIRRIA - BASE STYLES
+   Variables, Reset, Typography, Layout
+   =================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+/* ===================================
+   VARIABLES CSS
+   =================================== */
+
+:root {
+    /* Colores Primarios */
+    --color-rojo-profundo: #8B1A1A;
+    --color-rojo-principal: #C92A2A;
+    --color-naranja-calido: #E67700;
+    --color-marron-oscuro: #4A2C2A;
+    --color-marron-medio: #6B3410;
+
+    /* Colores Secundarios */
+    --color-crema-claro: #FFF9F0;
+    --color-crema-medio: #FFF4E6;
+    --color-verde-suave: #2F9E44;
+    --color-dorado: #D4AF37;
+
+    /* Colores de UI */
+    --color-texto-principal: #1A1A1A;
+    --color-texto-secundario: #4A4A4A;
+    --color-texto-terciario: #757575;
+    --color-fondo: #FFFFFF;
+    --color-fondo-alternado: #FAFAF8;
+
+    /* Gradientes */
+    --gradiente-rojo: linear-gradient(135deg, #8B1A1A 0%, #C92A2A 50%, #E63946 100%);
+    --gradiente-naranja: linear-gradient(135deg, #E67700 0%, #F08C00 50%, #FFB703 100%);
+    --gradiente-oscuro: linear-gradient(180deg, rgba(26, 26, 26, 0.95) 0%, rgba(74, 44, 42, 0.98) 100%);
+    --gradiente-overlay: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.7) 100%);
+    --gradiente-sutil: linear-gradient(135deg, rgba(201, 42, 42, 0.05) 0%, rgba(230, 119, 0, 0.05) 100%);
+
+    /* Sombras */
+    --sombra-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --sombra-md: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --sombra-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+    --sombra-xl: 0 16px 48px rgba(0, 0, 0, 0.16);
+    --sombra-floating: 0 12px 32px rgba(201, 42, 42, 0.15);
+    --sombra-inset: inset 0 2px 4px rgba(0, 0, 0, 0.06);
+
+    /* Espaciado Compacto */
+    --spacing-xs: 0.5rem;
+    --spacing-sm: 0.75rem;
+    --spacing-md: 1rem;
+    --spacing-lg: 1.5rem;
+    --spacing-xl: 2rem;
+    --spacing-2xl: 2.5rem;
+    --spacing-3xl: 3.5rem;
+
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 9999px;
+
+    /* Transiciones */
+    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Tipografía */
+    --font-display: 'Cormorant Garamond', serif;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+
+    /* Contenedores */
+    --container-max: 1280px;
+    --container-md: 960px;
+    --container-sm: 640px;
+}
+
+/* ===================================
+   RESET
+   =================================== */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--color-fondo);
+    color: var(--color-texto-principal);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+}
+
+/* ===================================
+   TIPOGRAFÍA
+   =================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--color-texto-principal);
+    margin-bottom: var(--spacing-md);
+}
+
+h1 {
+    font-family: var(--font-display);
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    letter-spacing: -0.01em;
+}
+
+h3 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1.125rem;
+}
+
+p {
+    margin-bottom: var(--spacing-md);
+    color: var(--color-texto-secundario);
+    font-size: 1.0625rem;
+    line-height: 1.8;
+}
+
+.lead {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: var(--color-texto-secundario);
+    line-height: 1.7;
+}
+
+.small-text {
+    font-size: 0.875rem;
+    color: var(--color-texto-terciario);
+}
+
+/* ===================================
+   LAYOUT
+   =================================== */
+
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+    width: 100%;
+}
+
+.container-narrow {
+    max-width: var(--container-md);
+    margin: 0 auto;
+}
+
+.section {
+    padding: var(--spacing-2xl) 0;
+}
+
+.section-alt {
+    background-color: var(--color-fondo-alternado);
+    border-top: 3px solid var(--color-naranja-calido);
+    border-bottom: 3px solid var(--color-naranja-calido);
+    position: relative;
+}
+
+.section-alt::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradiente-naranja);
+}
+
+.section-alt::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--gradiente-naranja);
+}
+
+/* Grid System */
+.grid {
+    display: grid;
+    gap: var(--spacing-lg);
+}
+
+.grid-2 {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.grid-4 {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* ===================================
+   IMÁGENES
+   =================================== */
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.img-cover {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-rounded {
+    border-radius: var(--radius-lg);
+    border: 3px solid white;
+    box-shadow: var(--sombra-md);
+}
+
+.img-shadow {
+    box-shadow: var(--sombra-lg);
+}
+
+/* ===================================
+   UTILIDADES
+   =================================== */
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.mt-sm {
+    margin-top: var(--spacing-sm);
+}
+
+.mt-md {
+    margin-top: var(--spacing-md);
+}
+
+.mt-lg {
+    margin-top: var(--spacing-lg);
+}
+
+.mt-xl {
+    margin-top: var(--spacing-xl);
+}
+
+.mb-sm {
+    margin-bottom: var(--spacing-sm);
+}
+
+.mb-md {
+    margin-bottom: var(--spacing-md);
+}
+
+.mb-lg {
+    margin-bottom: var(--spacing-lg);
+}
+
+.mb-xl {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* ===================================
+   ANIMACIONES
+   =================================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+@media (max-width: 768px) {
+    .container {
+        padding: var(--spacing-lg) var(--spacing-md);
+    }
+
+    .grid-2,
+    .grid-3,
+    .grid-4 {
+        grid-template-columns: 1fr;
+    }
+}

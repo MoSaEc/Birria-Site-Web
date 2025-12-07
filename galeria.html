@@ -1,0 +1,305 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Galería de Birria - Imágenes de nuestros deliciosos platillos">
+    <title>Galería - Birria</title>
+    <link rel="stylesheet" href="estilos/base.css">
+    <link rel="stylesheet" href="estilos/navegacion.css">
+    <link rel="stylesheet" href="estilos/componentes.css">
+    <link rel="stylesheet" href="estilos/galeria.css">
+    <script src="js/audio-persistente.js"></script>
+    <script src="js/animations.js" defer></script>
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="especialidades.html">Especialidades</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="galeria.html" class="active">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-galeria" style="min-height: 60vh;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-on-scroll">
+            <h1 class="hero-title">Galería de Birria</h1>
+            <p class="hero-subtitle">
+                Descubre la pasión y dedicación en cada platillo que creamos
+            </p>
+        </div>
+    </section>
+
+    <!-- Proceso de Preparación -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center fade-on-scroll">Proceso de Preparación de la Birria</h2>
+            <div class="divider"></div>
+
+            <div class="mapa-container fade-on-scroll">
+                <div class="mapa-instrucciones">
+                    <p class="mapa-instrucciones-title">👆 HAZ CLIC EN CADA ETAPA DEL PROCESO 👇</p>
+                    <p>Descubre cómo preparamos nuestra birria haciendo clic en las diferentes etapas del mapa</p>
+                    <p style="font-size: 1rem; margin-top: 1rem;">
+                        <span
+                            style="background: rgba(201, 42, 42, 0.2); padding: 0.5rem 1rem; border-radius: var(--radius-md); margin: 0 0.5rem; font-weight: 600;">🥩
+                            Izquierda: Marinado</span>
+                        <span
+                            style="background: rgba(230, 119, 0, 0.2); padding: 0.5rem 1rem; border-radius: var(--radius-md); margin: 0 0.5rem; font-weight: 600;">🔥
+                            Centro: Cocción</span>
+                        <span
+                            style="background: rgba(47, 158, 68, 0.2); padding: 0.5rem 1rem; border-radius: var(--radius-md); margin: 0 0.5rem; font-weight: 600;">🍽️
+                            Derecha: Servido</span>
+                    </p>
+                </div>
+
+                <!-- Contenedor con áreas clickeables visibles -->
+                <div style="position: relative; max-width: 900px; margin: 2rem auto;">
+                    <!-- Overlay con áreas delineadas -->
+                    <div
+                        style="position: absolute; inset: 0; display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; pointer-events: none; z-index: 2; padding: 5px;">
+                        <!-- Área Marinado -->
+                        <div
+                            style="border: 5px dashed #C92A2A; background: rgba(201, 42, 42, 0.15); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+                            <span
+                                style="background: linear-gradient(135deg, #8B1A1A 0%, #C92A2A 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; font-weight: 700; box-shadow: 0 4px 12px rgba(0,0,0,0.3); font-size: 1rem;">📍
+                                CLICK AQUÍ</span>
+                            <span
+                                style="background: white; color: #C92A2A; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.9rem;">MARINADO</span>
+                        </div>
+                        <!-- Área Cocción -->
+                        <div
+                            style="border: 5px dashed #E67700; background: rgba(230, 119, 0, 0.15); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+                            <span
+                                style="background: linear-gradient(135deg, #E67700 0%, #FFB703 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; font-weight: 700; box-shadow: 0 4px 12px rgba(0,0,0,0.3); font-size: 1rem;">📍
+                                CLICK AQUÍ</span>
+                            <span
+                                style="background: white; color: #E67700; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.9rem;">COCCIÓN</span>
+                        </div>
+                        <!-- Área Servido -->
+                        <div
+                            style="border: 5px dashed #2F9E44; background: rgba(47, 158, 68, 0.15); border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px;">
+                            <span
+                                style="background: linear-gradient(135deg, #2F9E44 0%, #37B24D 100%); color: white; padding: 0.75rem 1.5rem; border-radius: 25px; font-weight: 700; box-shadow: 0 4px 12px rgba(0,0,0,0.3); font-size: 1rem;">📍
+                                CLICK AQUÍ</span>
+                            <span
+                                style="background: white; color: #2F9E44; padding: 0.5rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.9rem;">SERVIDO</span>
+                        </div>
+                    </div>
+
+                    <!-- Mapa de imagen -->
+                    <map name="proceso-mapa">
+                        <area shape="rect" coords="0,0,300,600" href="#" alt="Marinado" style="cursor: pointer;"
+                            onclick="alert('🥩 MARINADO (24 horas):\n\n✓ La carne se marina durante 24 horas\n✓ Mezcla secreta de 17 especias\n✓ Chiles guajillo y ancho\n✓ Ajo, jengibre y especias tradicionales\n\nEste proceso es fundamental para lograr el sabor característico de nuestra birria.'); return false;">
+                        <area shape="rect" coords="300,0,600,600" href="#" alt="Cocción" style="cursor: pointer;"
+                            onclick="alert('🔥 COCCIÓN LENTA (8 horas):\n\n✓ Cocción a fuego lento\n✓ Ollas tradicionales de barro\n✓ Mínimo 8 horas de cocción\n✓ La carne se ablande completamente\n✓ Absorbe todos los sabores\n\nEste proceso lento es la clave de la textura perfecta.'); return false;">
+                        <area shape="rect" coords="600,0,900,600" href="#" alt="Servido" style="cursor: pointer;"
+                            onclick="alert('🍽️ SERVIDO FRESCO:\n\n✓ Preparado al momento\n✓ Cilantro finamente picado\n✓ Cebolla fresca\n✓ Limones recién cortados\n✓ Salsas caseras\n\nCada orden se sirve en su punto perfecto de temperatura.'); return false;">
+                    </map>
+
+                    <img src="imágenes/preparacion_birria_1765079469564.png" usemap="#proceso-mapa"
+                        alt="Proceso de preparación"
+                        style="width: 100%; display: block; border-radius: 16px; position: relative; z-index: 1; box-shadow: 0 8px 24px rgba(0,0,0,0.15);">
+                </div>
+
+                <!-- Descripciones debajo del mapa -->
+                <div class="grid grid-3" style="margin-top: 2rem; gap: 1.5rem;">
+                    <div
+                        style="text-align: center; padding: 2rem 1.5rem; background: linear-gradient(135deg, rgba(201, 42, 42, 0.1) 0%, rgba(201, 42, 42, 0.02) 100%); border-radius: 16px; border: 3px solid rgba(201, 42, 42, 0.4); box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                        <h4 style="color: #C92A2A; margin-bottom: 0.75rem; font-size: 1.3rem;">🥩 Marinado</h4>
+                        <p style="font-size: 1rem; margin: 0; font-weight: 600; color: #666;">24 horas en especias</p>
+                    </div>
+                    <div
+                        style="text-align: center; padding: 2rem 1.5rem; background: linear-gradient(135deg, rgba(230, 119, 0, 0.1) 0%, rgba(230, 119, 0, 0.02) 100%); border-radius: 16px; border: 3px solid rgba(230, 119, 0, 0.4); box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                        <h4 style="color: #E67700; margin-bottom: 0.75rem; font-size: 1.3rem;">🔥 Cocción Lenta</h4>
+                        <p style="font-size: 1rem; margin: 0; font-weight: 600; color: #666;">8 horas a fuego lento</p>
+                    </div>
+                    <div
+                        style="text-align: center; padding: 2rem 1.5rem; background: linear-gradient(135deg, rgba(47, 158, 68, 0.1) 0%, rgba(47, 158, 68, 0.02) 100%); border-radius: 16px; border: 3px solid rgba(47, 158, 68, 0.4); box-shadow: 0 4px 12px rgba(0,0,0,0.08);">
+                        <h4 style="color: #2F9E44; margin-bottom: 0.75rem; font-size: 1.3rem;">🍽️ Servido</h4>
+                        <p style="font-size: 1rem; margin: 0; font-weight: 600; color: #666;">Fresco al momento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabla de Menú -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center fade-on-scroll">Menú de Platillos Populares</h2>
+            <div class="divider"></div>
+
+            <div class="fade-on-scroll" style="overflow-x: auto;">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Platillo</th>
+                            <th>Imagen</th>
+                            <th>Descripción</th>
+                            <th>Porciones</th>
+                            <th>Nivel Picante</th>
+                            <th>Recomendación</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Tacos de Birria</strong></td>
+                            <td><img src="imágenes/tacos_birria_1765079403584.png" alt="Tacos"
+                                    style="width: 100px; height: 80px; object-fit: cover;"></td>
+                            <td>Tortillas doradas rellenas de birria jugosa</td>
+                            <td>4 tacos</td>
+                            <td>🌶️🌶️</td>
+                            <td>Para compartir</td>
+                        </tr>
+                        <tr class="tabla-destacada">
+                            <td><strong>Quesabirria ⭐</strong></td>
+                            <td><img src="imágenes/quesabirria_1765079418902.png" alt="Quesabirria"
+                                    style="width: 100px; height: 80px; object-fit: cover;"></td>
+                            <td>Con queso Oaxaca derretido que se estira</td>
+                            <td>4 quesatacos</td>
+                            <td>🌶️🌶️</td>
+                            <td>Bestseller</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Consomé</strong></td>
+                            <td><img src="imágenes/consome_birria_1765079440453.png" alt="Consomé"
+                                    style="width: 100px; height: 80px; object-fit: cover;"></td>
+                            <td>Caldo aromático de 8 horas de cocción</td>
+                            <td>Tazón grande</td>
+                            <td>🌶️🌶️🌶️</td>
+                            <td>Reconfortante</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Birria en Plato</strong></td>
+                            <td><img src="imágenes/birria_plato_1765079455538.png" alt="Plato"
+                                    style="width: 100px; height: 80px; object-fit: cover;"></td>
+                            <td>Estilo tradicional Jalisco con tortillas a mano</td>
+                            <td>Porción generosa</td>
+                            <td>🌶️🌶️</td>
+                            <td>Experiencia completa</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Variedad Mix</strong></td>
+                            <td><img src="imágenes/variedad_platillos_1765079551419.png" alt="Variedad"
+                                    style="width: 100px; height: 80px; object-fit: cover;"></td>
+                            <td>Combinación de todos nuestros platillos</td>
+                            <td>4-6 personas</td>
+                            <td>Variable</td>
+                            <td>Para eventos</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Platillos -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center fade-on-scroll">Nuestros Deliciosos Platillos</h2>
+            <div class="divider"></div>
+
+            <div class="galeria-grid">
+                <div class="galeria-item fade-on-scroll" data-lightbox>
+                    <img src="imágenes/tacos_birria_1765079403584.png" alt="Tacos de Birria">
+                </div>
+                <div class="galeria-item fade-on-scroll" data-lightbox>
+                    <img src="imágenes/quesabirria_1765079418902.png" alt="Quesabirria">
+                </div>
+                <div class="galeria-item fade-on-scroll" data-lightbox>
+                    <img src="imágenes/consome_birria_1765079440453.png" alt="Consomé">
+                </div>
+                <div class="galeria-item fade-on-scroll" data-lightbox>
+                    <img src="imágenes/birria_plato_1765079455538.png" alt="Birria en Plato">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería del Restaurante -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center fade-on-scroll">Nuestro Restaurante y Preparación</h2>
+            <div class="divider"></div>
+
+            <div class="galeria-grid">
+                <div class="galeria-item fade-on-scroll" data-lightbox>
+                    <img src="imágenes/preparacion_birria_1765079469564.png" alt="Preparación">
+                </div>
+                <div class="galeria-item fade-on-scroll" data-lightbox>
+                    <img src="imágenes/ingredientes_frescos_1765079484000.png" alt="Ingredientes">
+                </div>
+                <div class="galeria-item fade-on-scroll" data-lightbox>
+                    <img src="imágenes/restaurante_ambiente_1765079499142.png" alt="Ambiente">
+                </div>
+                <div class="galeria-item fade-on-scroll" data-lightbox>
+                    <img src="imágenes/familia_comiendo_1765079516842.png" alt="Familia">
+                </div>
+                <div class="galeria-item fade-on-scroll" data-lightbox>
+                    <img src="imágenes/chuy_chef_1765079533320.png" alt="Chef">
+                </div>
+                <div class="galeria-item fade-on-scroll" data-lightbox>
+                    <img src="imágenes/variedad_platillos_1765079551419.png" alt="Variedad">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section">
+        <div class="container container-narrow">
+            <div class="galeria-cta fade-on-scroll">
+                <h3>¿Se te antojó?</h3>
+                <p class="lead">Haz tu pedido ahora y disfruta de estos deliciosos platillos</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 2rem;">
+                    <a href="pedidos.html" class="btn btn-primary btn-large">Hacer Pedido</a>
+                    <a href="especialidades.html" class="btn btn-secondary btn-large">Ver Menú Completo</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>Birria</h4>
+                <p>La auténtica birria estilo Jalisco desde hace más de 30 años.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Enlaces</h4>
+                <a href="index.html">Inicio</a>
+                <a href="especialidades.html">Especialidades</a>
+                <a href="pedidos.html">Pedidos</a>
+                <a href="galeria.html">Galería</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <p>📍 Av. Revolución #456<br>Guadalajara, Jalisco</p>
+                <p>📞 +52 (33) 1234-5678</p>
+            </div>
+            <div class="footer-column">
+                <h4>Horarios</h4>
+                <p>Lun-Jue: 11AM-9PM</p>
+                <p>Vie-Sáb: 11AM-11PM</p>
+                <p>Dom: 10AM-8PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Birria. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+

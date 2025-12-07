@@ -1,0 +1,224 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Especialidades de Birria - Tacos, Quesabirria, Consomé y más platillos tradicionales">
+    <title>Especialidades - Birria</title>
+    <link rel="stylesheet" href="estilos/base.css">
+    <link rel="stylesheet" href="estilos/navegacion.css">
+    <link rel="stylesheet" href="estilos/componentes.css">
+    <link rel="stylesheet" href="estilos/especialidades.css">
+    <script src="js/audio-persistente.js"></script>
+    <script src="js/animations.js" defer></script>
+</head>
+
+<body>
+    <!-- Navegación -->
+    <nav>
+        <div class="nav-container">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="especialidades.html" class="active">Especialidades</a></li>
+                <li><a href="pedidos.html">Pedidos</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero hero-especialidades" style="min-height: 60vh;">
+        <div class="hero-overlay"></div>
+        <div class="hero-content fade-on-scroll">
+            <h1 class="hero-title">Nuestras Especialidades</h1>
+            <p class="hero-subtitle">
+                Cada plat illo preparado con amor, siguiendo 30 años de tradición familiar
+            </p>
+        </div>
+    </section>
+
+    <!-- Introducción -->
+    <section class="section">
+        <div class="container container-narrow text-center">
+            <div class="decorative-line"></div>
+            <p class="lead fade-on-scroll">
+                Descubre los platillos que han conquistado el corazón de miles de personas.
+                Cada uno preparado con la receta secreta de la familia y los mejores ingredientes.
+            </p>
+        </div>
+    </section>
+
+    <!-- Platillos Principales -->
+    <section class="section section-alt">
+        <div class="container">
+            <h2 class="text-center fade-on-scroll">Menu de Especialidades</h2>
+            <div class="divider"></div>
+
+            <div class="grid grid-2" style="gap: 2.5rem;">
+                <!-- Tacos de Birria -->
+                <div class="card fade-on-scroll">
+                    <span class="badge" style="margin-bottom: 1rem;">Popular</span>
+                    <img src="imágenes/tacos_birria_1765079403584.png" alt="Tacos de Birria" class="card-image"
+                        data-lightbox>
+                    <h3 class="card-title">🌮 Tacos de Birria</h3>
+                    <p class="card-text">
+                        Tortillas de maíz doradas y crujientes, rellenas de birria de res tierna y jugosa.
+                        Servidos con consomé aromático para sumergir.
+                    </p>
+                    <div class="highlight-box">
+                        <p><strong>Incluye:</strong> 4 tacos + consomé + guarniciones</p>
+                        <p><strong>Picante:</strong> 🌶️🌶️ Medio</p>
+                    </div>
+                    <a href="pedidos.html" class="btn btn-secondary" style="width: 100%; margin-top: 1rem;">Ordenar
+                        Ahora</a>
+                </div>
+
+                <!-- Quesabirria -->
+                <div class="card fade-on-scroll">
+                    <span class="badge badge-secondary" style="margin-bottom: 1rem;">Best Seller ⭐</span>
+                    <img src="imágenes/quesabirria_1765079418902.png" alt="Quesabirria" class="card-image"
+                        data-lightbox>
+                    <h3 class="card-title">🧀 Quesabirria</h3>
+                    <p class="card-text">
+                        La evolución perfecta: tortilla dorada con birria y queso Oaxaca que se estira
+                        deliciosamente con cada bocado. ¡Simplemente irresistible!
+                    </p>
+                    <div class="highlight-box">
+                        <p><strong>Incluye:</strong> 4 quesatacos + consomé caliente</p>
+                        <p><strong>Picante:</strong> 🌶️🌶️ Medio</p>
+                    </div>
+                    <a href="pedidos.html" class="btn btn-secondary" style="width: 100%; margin-top: 1rem;">Ordenar
+                        Ahora</a>
+                </div>
+
+                <!-- Consomé -->
+                <div class="card fade-on-scroll">
+                    <span class="badge badge-success" style="margin-bottom: 1rem;">Reconfortante</span>
+                    <img src="imágenes/consome_birria_1765079440453.png" alt="Consomé de Birria" class="card-image"
+                        data-lightbox>
+                    <h3 class="card-title">🍲 Consomé de Birria</h3>
+                    <p class="card-text">
+                        El caldo aromático resultante de 8 horas de cocción lenta, rico en especias
+                        y con trozos tiernos de carne. Perfecto para días fríos.
+                    </p>
+                    <div class="highlight-box">
+                        <p><strong>Incluye:</strong> Tazón grande + tortillas + guarniciones</p>
+                        <p><strong>Picante:</strong> 🌶️🌶️🌶️ Picante</p>
+                    </div>
+                    <a href="pedidos.html" class="btn btn-secondary" style="width: 100%; margin-top: 1rem;">Ordenar
+                        Ahora</a>
+                </div>
+
+                <!-- Birria en Plato -->
+                <div class="card fade-on-scroll">
+                    <span class="badge" style="margin-bottom: 1rem;">Tradicional</span>
+                    <img src="imágenes/birria_plato_1765079455538.png" alt="Birria en Plato" class="card-image"
+                        data-lightbox>
+                    <h3 class="card-title">🍽️ Birria en Plato</h3>
+                    <p class="card-text">
+                        La forma tradicional de servir birria, estilo Jalisco auténtico.
+                        Carne deshebrada en su jugo, servida con tortillas hechas a mano.
+                    </p>
+                    <div class="highlight-box">
+                        <p><strong>Incluye:</strong> Porción generosa + consomé + tortillas</p>
+                        <p><strong>Picante:</strong> 🌶️🌶️ Medio</p>
+                    </div>
+                    <a href="pedidos.html" class="btn btn-secondary" style="width: 100%; margin-top: 1rem;">Ordenar
+                        Ahora</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ingredientes -->
+    <section class="section">
+        <div class="container">
+            <h2 class="text-center fade-on-scroll">Ingredientes de Calidad</h2>
+            <div class="divider"></div>
+            <div class="grid grid-2" style="align-items: center; gap: 3rem;">
+                <div class="fade-on-scroll">
+                    <img src="imágenes/ingredientes_frescos_1765079484000.png" alt="Ingredientes Frescos"
+                        class="img-rounded">
+                </div>
+                <div class="fade-on-scroll">
+                    <h3>17 Especias Secretas</h3>
+                    <p class="lead">
+                        Nuestra birria se distingue por una mezcla única de especias que ha pasado
+                        de generación en generación.
+                    </p>
+                    <div class="highlight-box">
+                        <h4>Ingredientes Principales:</h4>
+                        <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem;">
+                            <span class="badge badge-outline">Chile Guajillo</span>
+                            <span class="badge badge-outline">Chile Ancho</span>
+                            <span class="badge badge-outline">Comino</span>
+                            <span class="badge badge-outline">Canela</span>
+                            <span class="badge badge-outline">Clavo</span>
+                            <span class="badge badge-outline">Orégano</span>
+                            <span class="badge badge-outline">Ajo</span>
+                            <span class="badge badge-outline">Jengibre</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="section section-alt">
+        <div class="container container-narrow text-center">
+            <div class="fade-on-scroll"
+                style="background: var(--gradiente-rojo); padding: 3rem; border-radius: var(--radius-xl); color: white; box-shadow: var(--sombra-xl);">
+                <h2 style="color: white; margin-bottom: 1rem;">¿Listo para disfrutar?</h2>
+                <p style="font-size: 1.1rem; margin-bottom: 2rem; color: rgba(255,255,255,0.95);">
+                    Haz tu pedido ahora y disfruta de nuestra deliciosa birria en tu hogar
+                    o visítanos en nuestro restaurante.
+                </p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="pedidos.html" class="btn btn-large"
+                        style="background: white; color: var(--color-rojo-principal);">Hacer Pedido</a>
+                    <a href="contacto.html" class="btn btn-large"
+                        style="background: transparent; border: 2px solid white; color: white;">Contáctanos</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h4>Birria</h4>
+                <p>La auténtica birria estilo Jalisco desde hace más de 30 años.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Enlaces</h4>
+                <a href="index.html">Inicio</a>
+                <a href="especialidades.html">Especialidades</a>
+                <a href="pedidos.html">Pedidos</a>
+                <a href="galeria.html">Galería</a>
+            </div>
+            <div class="footer-column">
+                <h4>Contacto</h4>
+                <p>📍 Av. Revolución #456<br>Guadalajara, Jalisco</p>
+                <p>📞 +52 (33) 1234-5678</p>
+            </div>
+            <div class="footer-column">
+                <h4>Horarios</h4>
+                <p>Lun-Jue: 11AM-9PM</p>
+                <p>Vie-Sáb: 11AM-11PM</p>
+                <p>Dom: 10AM-8PM</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Birria. Todos los derechos reservados.</p>
+            <p style="margin-top: 0.5rem;">Hecho con ❤️ y mucho sabor para ti</p>
+        </div>
+    </footer>
+</body>
+
+</html>
+

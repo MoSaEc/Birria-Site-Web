@@ -1,0 +1,290 @@
+/* ===================================
+   INDEX PAGE - Estilos Específicos
+   =================================== */
+
+/* Sección de Estadísticas */
+.stats-section {
+    background: var(--gradiente-sutil);
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url('data:image/svg+xml,<svg width="60" height="60" xmlns="http://www.w3.org/2000/svg"><circle cx="30" cy="30" r="2" fill="%23E67700" opacity="0.1"/></svg>');
+    background-size: 60px 60px;
+}
+
+.stat-item {
+    text-align: center;
+    padding: var(--spacing-lg);
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--color-crema-medio);
+    box-shadow: var(--sombra-md);
+    transition: all var(--transition-base);
+}
+
+.stat-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-lg);
+    border-color: var(--color-naranja-calido);
+}
+
+.stat-number {
+    font-size: clamp(2.5rem, 4vw, 3.5rem);
+    font-family: var(--font-display);
+    color: var(--color-rojo-principal);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.stat-label {
+    font-weight: 600;
+    color: var(--color-texto-secundario);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+}
+
+/* Testimonios */
+.testimonial-card {
+    background: white;
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--sombra-md);
+    border: 2px solid var(--color-crema-medio);
+    border-left: 5px solid var(--color-rojo-principal);
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.testimonial-card::before {
+    content: '"';
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    font-size: 5rem;
+    color: var(--color-naranja-calido);
+    opacity: 0.1;
+    font-family: var(--font-display);
+    line-height: 1;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--sombra-xl);
+    border-left-width: 8px;
+}
+
+.testimonial-stars {
+    color: var(--color-naranja-calido);
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-md);
+    letter-spacing: 2px;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--color-texto-secundario);
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+}
+
+.testimonial-author {
+    font-weight: 700;
+    color: var(--color-texto-principal);
+    margin-bottom: 0.25rem;
+}
+
+.testimonial-role {
+    color: var(--color-texto-terciario);
+    font-size: 0.875rem;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+    background: var(--gradiente-rojo);
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    text-align: center;
+    color: white;
+    box-shadow: var(--sombra-xl);
+    border: 3px solid rgba(255, 255, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.newsletter-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: pulse 3s ease-in-out infinite;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: var(--spacing-md);
+    max-width: 500px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.newsletter-input {
+    flex: 1;
+    min-width: 250px;
+    padding: 1rem 1.5rem;
+    border: 2px solid white;
+    border-radius: var(--radius-lg);
+    font-size: 1rem;
+    background: rgba(255, 255, 255, 0.95);
+    transition: all var(--transition-base);
+}
+
+.newsletter-input:focus {
+    outline: none;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+}
+
+/* Historia Section */
+.historia-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-2xl);
+    align-items: center;
+}
+
+.historia-image-container {
+    position: relative;
+}
+
+.historia-image-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: 10px;
+    bottom: 10px;
+    background: var(--gradiente-naranja);
+    border-radius: var(--radius-lg);
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.historia-image {
+    position: relative;
+    z-index: 1;
+    border-radius: var(--radius-lg);
+    border: 4px solid white;
+    box-shadow: var(--sombra-xl);
+}
+
+/* Proceso Cards */
+.proceso-card {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--color-crema-medio);
+    box-shadow: var(--sombra-md);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.proceso-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradiente-rojo);
+    transform: scaleX(0);
+    transition: transform var(--transition-base);
+}
+
+.proceso-card:hover::before {
+    transform: scaleX(1);
+}
+
+.proceso-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-xl);
+    border-color: var(--color-naranja-calido);
+}
+
+/* Gallery Preview */
+.gallery-preview {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--radius-lg);
+    border: 3px solid white;
+    box-shadow: var(--sombra-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.gallery-item::after {
+    content: '🔍';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: var(--sombra-xl);
+    border-color: var(--color-naranja-calido);
+}
+
+.gallery-item:hover::after {
+    opacity: 1;
+}
+
+.gallery-item img {
+    transition: all var(--transition-slow);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.7);
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+@media (max-width: 768px) {
+    .historia-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .newsletter-form {
+        flex-direction: column;
+    }
+
+    .newsletter-input {
+        min-width: 100%;
+    }
+}

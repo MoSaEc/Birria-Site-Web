@@ -1,0 +1,256 @@
+/* ===================================
+   PEDIDOS - Estilos Específicos
+   =================================== */
+
+/* Proceso de pedido */
+.proceso-pedido {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--spacing-lg);
+    margin: var(--spacing-2xl) 0;
+}
+
+.paso-card {
+    text-align: center;
+    padding: var(--spacing-xl);
+    background: white;
+    border-radius: var(--radius-lg);
+    border: 3px solid var(--color-crema-medio);
+    box-shadow: var(--sombra-md);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.paso-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: var(--gradiente-sutil);
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.paso-card:hover::before {
+    opacity: 1;
+}
+
+.paso-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--sombra-xl);
+    border-color: var(--color-naranja-calido);
+}
+
+.paso-numero {
+    width: 70px;
+    height: 70px;
+    background: var(--gradiente-rojo);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 auto var(--spacing-md);
+    box-shadow: var(--sombra-floating);
+    border: 4px solid white;
+    position: relative;
+    z-index: 1;
+}
+
+/* Formulario mejorado */
+.form-container {
+    background: white;
+    padding: var(--spacing-2xl);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--sombra-lg);
+    border: 3px solid var(--color-crema-medio);
+}
+
+.form-group {
+    margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: var(--spacing-sm);
+    color: var(--color-texto-principal);
+    font-size: 1rem;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.875rem 1.25rem;
+    border: 2px solid var(--color-crema-medio);
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    transition: all var(--transition-base);
+    background: white;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--color-rojo-principal);
+    box-shadow: 0 0 0 3px rgba(201, 42, 42, 0.1);
+}
+
+.form-group textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Radio y Checkbox mejorados */
+.radio-group,
+.checkbox-group {
+    display: grid;
+    gap: var(--spacing-sm);
+}
+
+.radio-option,
+.checkbox-option {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md);
+    background: var(--color-fondo-alternado);
+    border: 2px solid var(--color-crema-medio);
+    border-radius: var(--radius-md);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.radio-option:hover,
+.checkbox-option:hover {
+    background: white;
+    border-color: var(--color-naranja-calido);
+    transform: translateX(4px);
+}
+
+.radio-option input,
+.checkbox-option input {
+    margin-right: var(--spacing-sm);
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.radio-option label,
+.checkbox-option label {
+    cursor: pointer;
+    margin-bottom: 0;
+    flex: 1;
+}
+
+/* Submit button */
+input[type="submit"] {
+    width: 100%;
+    padding: 1.25rem;
+    background: var(--gradiente-rojo);
+    color: white;
+    border: none;
+    border-radius: var(--radius-lg);
+    font-size: 1.125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all var(--transition-base);
+    box-shadow: var(--sombra-floating);
+}
+
+input[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 20px 40px rgba(201, 42, 42, 0.3);
+}
+
+/* Menú descargable */
+.menu-download {
+    background: var(--gradiente-naranja);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    color: white;
+    box-shadow: var(--sombra-lg);
+    border: 3px solid rgba(255, 255, 255, 0.3);
+}
+
+.menu-download h2 {
+    color: white;
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    padding: 1rem 2.5rem;
+    background: white;
+    color: var(--color-naranja-calido);
+    text-decoration: none;
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: 1.1rem;
+    box-shadow: var(--sombra-md);
+    transition: all var(--transition-base);
+}
+
+.download-button:hover {
+    transform: scale(1.05);
+    box-shadow: var(--sombra-xl);
+}
+
+/* Resumen de pedido (sidebar futuro) */
+.order-summary {
+    background: var(--color-fondo-alternado);
+    padding: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    border: 2px solid var(--color-crema-medio);
+    position: sticky;
+    top: 100px;
+}
+
+.order-summary h3 {
+    margin-bottom: var(--spacing-md);
+    padding-bottom: var(--spacing-md);
+    border-bottom: 2px solid var(--color-crema-medio);
+}
+
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--spacing-sm) 0;
+    border-bottom: 1px dashed var(--color-crema-medio);
+}
+
+.order-total {
+    display: flex;
+    justify-content: space-between;
+    padding-top: var(--spacing-md);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-rojo-principal);
+}
+
+/* ===================================
+   RESPONSIVE
+   =================================== */
+
+@media (max-width: 768px) {
+    .proceso-pedido {
+        grid-template-columns: 1fr;
+    }
+
+    .form-container {
+        padding: var(--spacing-lg);
+    }
+}

@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú - Birria</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Inter:wght@400;600;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1A1A1A;
+            background: white;
+            line-height: 1.6;
+        }
+
+        .page {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 20mm;
+            background: white;
+        }
+
+        .header {
+            text-align: center;
+            border-bottom: 4px solid #C92A2A;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            font-weight: 900;
+            color: #8B1A1A;
+            margin-bottom: 10px;
+        }
+
+        .tagline {
+            font-size: 16px;
+            color: #E67700;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #C92A2A;
+            margin: 30px 0 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #FFE8CC;
+        }
+
+        .menu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 25px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed #E0E0E0;
+        }
+
+        .item-info {
+            flex: 1;
+            padding-right: 20px;
+        }
+
+        .item-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1A1A1A;
+            margin-bottom: 8px;
+        }
+
+        .item-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .item-details {
+            font-size: 12px;
+            color: #888;
+        }
+
+        .item-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2F9E44;
+            white-space: nowrap;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #C92A2A;
+            color: white;
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 12px;
+            margin-left: 10px;
+            text-transform: uppercase;
+        }
+
+        .badge-popular {
+            background: #E67700;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 2px solid #C92A2A;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .contact-info {
+            margin-top: 15px;
+            font-size: 14px;
+            color: #1A1A1A;
+        }
+
+        .spicy {
+            color: #C92A2A;
+            font-size: 18px;
+        }
+
+        /* Estilos para impresión */
+        @media print {
+            body {
+                background: white;
+            }
+
+            .page {
+                margin: 0;
+                padding: 15mm;
+            }
+
+            .menu-item {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">BIRRIA</div>
+            <div class="tagline">Auténtica Birria Estilo Jalisco</div>
+        </div>
+
+        <!-- Especialidades -->
+        <h2 class="section-title">🌮 Nuestras Especialidades</h2>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-name">
+                    Tacos de Birria
+                    <span class="badge">Popular</span>
+                </div>
+                <div class="item-description">
+                    Tortillas de maíz doradas y crujientes, rellenas de birria de res tierna y jugosa. Servidos con
+                    consomé aromático para sumergir.
+                </div>
+                <div class="item-details">
+                    ✓ 4 tacos + consomé + guarniciones<br>
+                    Picante: <span class="spicy">🌶️🌶️</span> Medio
+                </div>
+            </div>
+            <div class="item-price">$180</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-name">
+                    Quesabirria
+                    <span class="badge badge-popular">Best Seller ⭐</span>
+                </div>
+                <div class="item-description">
+                    La evolución perfecta: tortilla dorada con birria y queso Oaxaca que se estira deliciosamente con
+                    cada bocado. ¡Simplemente irresistible!
+                </div>
+                <div class="item-details">
+                    ✓ 4 quesatacos + consomé caliente<br>
+                    Picante: <span class="spicy">🌶️🌶️</span> Medio
+                </div>
+            </div>
+            <div class="item-price">$210</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-name">Consomé de Birria</div>
+                <div class="item-description">
+                    El caldo aromático resultante de 8 horas de cocción lenta, rico en especias y con trozos tiernos de
+                    carne. Perfecto para días fríos.
+                </div>
+                <div class="item-details">
+                    ✓ Tazón grande + tortillas + guarniciones<br>
+                    Picante: <span class="spicy">🌶️🌶️🌶️</span> Picante
+                </div>
+            </div>
+            <div class="item-price">$140</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-name">Birria en Plato</div>
+                <div class="item-description">
+                    La forma tradicional de servir birria, estilo Jalisco auténtico. Carne deshebrada en su jugo,
+                    servida con tortillas hechas a mano.
+                </div>
+                <div class="item-details">
+                    ✓ Porción generosa + consomé + tortillas<br>
+                    Picante: <span class="spicy">🌶️🌶️</span> Medio
+                </div>
+            </div>
+            <div class="item-price">$200</div>
+        </div>
+
+        <!-- Paquetes -->
+        <h2 class="section-title">📦 Paquetes Especiales</h2>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-name">Paquete Familiar</div>
+                <div class="item-description">
+                    Perfecto para compartir: 8 tacos + 1L de consomé + guarniciones completas + 4 refrescos
+                </div>
+                <div class="item-details">
+                    ✓ Rinde para 3-4 personas
+                </div>
+            </div>
+            <div class="item-price">$450</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-name">Paquete Evento</div>
+                <div class="item-description">
+                    Para grandes ocasiones: 20 tacos + 2L de consomé + guarniciones + salsas variadas
+                </div>
+                <div class="item-details">
+                    ✓ Rinde para 8-10 personas
+                </div>
+            </div>
+            <div class="item-price">$950</div>
+        </div>
+
+        <!-- Bebidas -->
+        <h2 class="section-title">🥤 Bebidas</h2>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-name">Agua de Horchata</div>
+                <div class="item-description">Refrescante y dulce, hecha con arroz, canela y vainilla</div>
+            </div>
+            <div class="item-price">$35</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-name">Agua de Jamaica</div>
+                <div class="item-description">Natural y refrescante, perfecta para acompañar tu birria</div>
+            </div>
+            <div class="item-price">$35</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-name">Refrescos</div>
+                <div class="item-description">Coca-Cola, Sprite, Fanta (600ml)</div>
+            </div>
+            <div class="item-price">$30</div>
+        </div>
+
+        <!-- Extras -->
+        <h2 class="section-title">➕ Extras</h2>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-name">Orden de Tortillas (5 piezas)</div>
+            </div>
+            <div class="item-price">$20</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-name">Consomé Extra (500ml)</div>
+            </div>
+            <div class="item-price">$50</div>
+        </div>
+
+        <div class="menu-item">
+            <div class="item-info">
+                <div class="item-name">Guarniciones Extra</div>
+                <div class="item-description">Cebolla, cilantro, limones, rábanos</div>
+            </div>
+            <div class="item-price">$25</div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <div><strong>Servicio a Domicilio Disponible</strong></div>
+            <div>Pedido mínimo: $200 | Área de cobertura: 10km | Tiempo estimado: 45-60 min</div>
+
+            <div class="contact-info">
+                <strong>📍</strong> Av. Revolución #456, Guadalajara, Jalisco<br>
+                <strong>📞</strong> +52 (33) 1234-5678<br>
+                <strong>📧</strong> pedidos@birria.com
+            </div>
+
+            <div style="margin-top: 15px; font-style: italic;">
+                Horarios: Lun-Jue 11AM-9PM | Vie-Sáb 11AM-11PM | Dom 10AM-8PM
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
